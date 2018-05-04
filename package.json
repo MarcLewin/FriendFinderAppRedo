@@ -1,0 +1,25 @@
+{
+  "name": "friendfinderappredo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcLewin/FriendFinderAppRedo.git"
+  },
+  "author": "Marc L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcLewin/FriendFinderAppRedo/issues"
+  },
+  "homepage": "https://github.com/MarcLewin/FriendFinderAppRedo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "save": "^2.3.2"
+  }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Match</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Modal -->
+    <div id="resultsModal" class="modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">
+                        <strong>Here is your closest Friend:</strong>
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="friendName"></h2>
+                    <img id="friendPhoto" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container">
+        <h2>Survey</h2>
+        <hr>
+        <h3>
+            <strong>About You</strong>
+        </h3>
+        <h4>Name</h4>
+        <input type="text" name="" id="name">
+        <h4>Link your photo:</h4>
+        <input type="url" name="" id="photo" pattern="https?://.+">
+
+        <hr>
+        <h3>
+            <strong>Question 1</strong>
+        </h3>
+        <h4>I like tailored suits</h4>
+        <select data-placeholder=" " id="quest1" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 2</strong>
+        </h3>
+        <h4>I enjoy raw meats</h4>
+        <select data-placeholder=" " id="quest2" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 3</strong>
+        </h3>
+        <h4>I like to be around other people </h4>
+        <select data-placeholder=" " id="quest3" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 4</strong>
+        </h3>
+        <h4>I like to workout</h4>
+        <select data-placeholder=" " id="quest4" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 5</strong>
+        </h3>
+        <h4>I enjoy invading countries and/or marauding</h4>
+        <select data-placeholder=" " id="quest5" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 6</strong>
+        </h3>
+        <h4>I like different languages</h4>
+        <select data-placeholder=" " id="quest6" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 7</strong>
+        </h3>
+        <h4> I enjoy the jungle </h4>
+        <select data-placeholder=" " id="quest7" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 8</strong>
+        </h3>
+        <h4> I love animals </h4>
+        <select data-placeholder=" " id="quest8" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 9</strong>
+        </h3>
+        <h4>I like fire </h4>
+        <select data-placeholder=" " id="quest9" class="verify">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <h3>
+            <strong>Question 10</strong>
+        </h3>
+        <h4> I like port wine</h4>
+        <select data-placeholder=" " id="quest10" class="verify">
+            <option value=""></option>">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+        </select>
+        <hr>
+        <button type="submit" class="btn btn-primary btn-lg btn-block " id="submit">Submit</button>
+        <hr>
+        <footer class="footer ">
+            <div class="container ">
+                <p>
+                    <a href="/api/friends ">API Friends List</a> |
+                    <a href="https://github.com/MarcLewin/FriendFinderApp">GitHub Repo</a> |
+                    <a href="/">Home</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript ">
+    $('#submit').on("click ", function() {
+
+
+        function verifySurvey() {
+            var valid = true;
+
+        
+            var name = $('#name').val();
+            if(name === ''){
+                valid=false
+            }
+
+       
+            var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+            var photoUrl = $('#photo').val();
+            if((!regex .test(photoUrl))) {
+            	valid = false;
+            }
+
+            $('.verify').each(function() {
+                    console.log($(this).val());
+                if($(this).val() === ""){
+                    valid = false;
+                }
+            });
+            return valid;
+        }
+
+        if (verifySurvey() === true) {
+            var newFriendInput = {
+                name: $('#name').val(),
+                photo: $('#photo').val(),
+                scores: [
+                    $("#quest1 ").val(),
+                    $("#quest2 ").val(),
+                    $("#quest3 ").val(),
+                    $("#quest4 ").val(),
+                    $("#quest5 ").val(),
+                    $("#quest6 ").val(),
+                    $("#quest7 ").val(),
+                    $("#quest8 ").val(),
+                    $("#quest9 ").val(),
+                    $("#quest10 ").val()
+                ]
+            }
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends ", newFriendInput, function(data) {
+                $("#friendName ").text(data.name);
+                $("#friendPhoto").attr("src", data.photo);
+                $("#resultsModal ").modal("toggle");
+            })
+        } else {
+            alert("Make sure survey fields are filled out");
+        }
+        return false;
+    });
+    </script>
+</body>
+
+</html>
