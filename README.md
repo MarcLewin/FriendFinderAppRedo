@@ -3,10 +3,7 @@
 
 Match with a friend.
 
-Input your score in our questionnaire and see which friend you most closely match with from our database of friends. 
-
-Github:
-https://github.com/MarcLewin/FriendFinderAppRedo
+Input your score in the questionnaire and see which friend you most closely match with from our database of friends. 
 
 
 Heroku deployed (allow time to load, heroku only loads recently refreshed pages quickly):
